@@ -13,7 +13,8 @@
     <ul>
     {% for forecast in results["hourly_forecasts"] %}
         <li>{{ forecast["timestamp"] }} | {{ forecast["temp"] }} | {{ forecast["conditions"].upper() }}</li>
-    {% endfor %}
+        <img src={{ forecast["image_url"] }} alt="alternatetext">
+        {% endfor %}
     </ul>
 
 {% endblock %}

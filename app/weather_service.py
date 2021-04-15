@@ -10,6 +10,11 @@ from dotenv import load_dotenv
 from pgeocode import Nominatim as Geocoder
 from pandas import isnull
 
+import IPython
+from IPython.display import Image
+from IPython.display import display
+
+
 from app import APP_ENV
 
 load_dotenv()
@@ -122,3 +127,5 @@ if __name__ == "__main__":
 
     for forecast in result["hourly_forecasts"]:
         print(forecast["timestamp"], "|", forecast["temp"], "|", forecast["conditions"])
+ 
+
